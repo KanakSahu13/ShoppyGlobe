@@ -1,0 +1,55 @@
+.site-header { 
+    position: sticky; 
+    top: 0; 
+    z-index: 10; 
+    display: grid; 
+    grid-template-columns: auto 1fr minmax(220px, 360px); 
+    align-items: center; 
+    gap: 1.5rem; 
+    padding: 1rem max(1rem, calc((100% - 1180px) / 2)); 
+    background: rgba(255,255,255,.96); 
+    border-bottom: 1px solid #e4e7ec; 
+    backdrop-filter: blur(8px); 
+}
+
+.brand { 
+    font-size: 1.35rem; 
+    font-weight: 900; 
+}
+
+.site-header nav { 
+    display: flex; 
+    gap: 1rem; 
+}
+
+.site-header nav a:hover { 
+    text-decoration: underline; 
+}
+
+.cart-link span { 
+    display: inline-grid; 
+    place-items: center; 
+    min-width: 1.4rem; 
+    height: 1.4rem; 
+    padding: 0 .25rem; 
+    border-radius: 999px; 
+    background: #18202a; 
+    color: white; 
+    font-size: .75rem; 
+}
+
+.search-box input { 
+    width: 100%; 
+    border: 1px solid #d0d5dd; 
+    border-radius: 10px; 
+    padding: .65rem .8rem; 
+}
+
+@media (max-width: 800px) { 
+    .site-header { 
+        grid-template-columns: 1fr auto; 
+    } 
+    .search-box { 
+        grid-column: 1 / -1; 
+    } 
+}
